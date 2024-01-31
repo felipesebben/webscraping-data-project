@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "webscraping-data-project"
+version = "0.1.0"
+description = ""
+authors = ["Felipe Sebben <felipesebben@yahoo.com.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+taskipy = "^1.12.2"
+pytest = "^8.0.0"
+selenium = "^4.17.2"
+black = "^24.1.1"
+isort = "^5.13.2"
+pre-commit = "^3.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+format = "isort . && black ."
+commit = "git add . && pre-commit run"
+test = "pytest tests -v"
