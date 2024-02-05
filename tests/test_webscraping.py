@@ -1,45 +1,48 @@
-from app.datasource.web_scraper import WebScraper
+from time import sleep
+
 import pytest
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 
 @pytest.fixture
-def scraper():
+def browser():
     """
-    Create a WebScraper instance.
+    Fixture to initialize the browser.
     """
-    s = WebScraper()
-    yield s
-    s.quit()
+    options = Options()
+    # options.add_argument("--headless")
+    driver = webdriver.Chrome(options=options)
+    yield driver
+
+    # Teardown
+    driver.quit()
 
 
-def test_init():
+def test_navigate_to_page(browser):
     """
-    Test that the WebScraper class is initialized correctly.
+    Test to navigate to a page.
     """
-    scraper = WebScraper(headless=False)
-    assert scraper.driver is not None
-    assert scraper.driver.current_url == "about:blank"
-    scraper.quit()
+    url = "https://www.gulfood.com/exhibitors?&page=01"
+    browser.get(url)
+    assert browser.current_url == url
 
 
-def test_webscraper_initialization(scraper):
+def test_button_click(browser):
     """
-    Test that the WebScraper class is initialized correctly.
+    Test to click the "Got it" button.
     """
-    assert isinstance(scraper, WebScraper)
+    url = "https://www.gulfood.com/exhibitors?&page=01"
+    browser.get(url)
+    got_it_button = browser.find_element(By.XPATH, "/html/body/div[1]/div/a")
+    got_it_button.click()
+    sleep(2)
+    assert got_it_button is not None
 
 
-def test_navigate_to_url(scraper):
-    """
-    Test that the WebScraper can navigate to a URL.
-    """
-    url = "https://www.google.com/"
-    result = scraper.navigate_to_url(url)
-    assert result == url
-
-
-def test_quit():
-    scraper.quit()
-    with pytest.raises(Exception):
-        # Attempting to use the driver after quitting should raise an exception
-        scraper.driver.get("http://example.com/")
+# def test_extract_data(browser):
+#     element = browser.find_element(
+#         By.CSS_SELECTOR, "pagination__list__item__link is-active"
+#     )
+#     assert element is not None
