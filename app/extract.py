@@ -14,7 +14,11 @@ def main():
     sleep(5)
     scraper.click_got_it_button()
     sleep(2)
-    scraper.extract_table_data()
+    data = scraper.extract_table_data()
+    print(data)
+    df = scraper.data_to_dataframe(data)
+    print(df.head())
+    scraper.close_driver()
 
 
 if __name__ == "__main__":
