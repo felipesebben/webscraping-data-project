@@ -18,7 +18,7 @@ def scraper():
     options.add_experimental_option(
         "excludeSwitches", ["enable-logging"]
     )  # Disable logging
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     driver = webdriver.Chrome(options=options)
     scraper = WebScraper(driver)
     yield scraper

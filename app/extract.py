@@ -8,7 +8,7 @@ def main():
     Main function to run the extraction process.
     """
     # Create a new instance of the WebScraper class
-    scraper = WebScraper(headless=False)
+    scraper = WebScraper(headless=True)
     # Navigate to the page
     scraper.navigate_to_page("https://www.gulfood.com/exhibitors?&page=01")
     sleep(5)
