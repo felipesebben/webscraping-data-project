@@ -20,7 +20,7 @@ def main():
     total_pages = scraper.extract_total_pages()
 
     # Iterate over each page
-    for page_number in range(38, total_pages + 1):
+    for page_number in range(1, total_pages + 1):
         url = f"https://www.gulfood.com/exhibitors?&page={page_number:02d}"
 
         scraper.navigate_to_page(url)
