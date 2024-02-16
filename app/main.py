@@ -6,7 +6,7 @@ def main():
     Main function to perform the ETL process.
     """
     # Extract data
-    # data = extract.extract()
+    data = extract.extract()
 
     # Transform data
     data = transform.transform()
