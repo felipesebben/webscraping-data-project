@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../instructions/">
       
+      
+        <link rel="next" href="../main_etl/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>ETL - 🕸 Gulfood 2024 Web scraper</title>
+        <title>ETL Classes - 🕸 Gulfood 2024 Web scraper</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#webscraper-class" class="md-skip">
+        <a href="#etl-classes-and-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ETL
+              ETL Classes
             
           </span>
         </div>
@@ -232,6 +234,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../instructions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -241,12 +263,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    ETL
+    ETL Classes
   </span>
   
 
@@ -257,7 +281,7 @@
         
   
   <span class="md-ellipsis">
-    ETL
+    ETL Classes
   </span>
   
 
@@ -269,12 +293,23 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#webscraper-class" class="md-nav__link">
@@ -446,6 +481,46 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main_etl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ETL Pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ETL Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -463,12 +538,23 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#webscraper-class" class="md-nav__link">
@@ -650,8 +736,9 @@
   
 
 
-  <h1>ETL</h1>
-
+<h1 id="etl-classes-and-functions">ETL Classes and Functions</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this session, you will find the classes that were created to perform the <strong>extraction</strong> and the <strong>transformation</strong> stages of the ETL process. The former is a <code>WebScraper</code> class that handles all the steps taken to extract the data from the website. The later, <code>Transformer</code>, takes care of all processes used to get the data in shape and make it ready for analysis.</p>
 <h2 id="webscraper-class">WebScraper class</h2>
 
 
