@@ -8,6 +8,13 @@ __pycache__/
 **/__pycache__/
 *.py[cod]
 *$py.class
+# Specific data
+data/processed/gulfood_2024_final.xlsx
+data/processed/gulfood_2024_processed.csv
+data/processed/gulfood_2024_processed.xlsx
+*.csv
+*.xlsx
+
 
 # C extensions
 *.so
