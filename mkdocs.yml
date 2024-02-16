@@ -13,12 +13,6 @@ nav:
   - ETL Pipeline: main_etl.md
   - ETL Workflow: workflow.md
 
-markdown_extensions:
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-
 
 plugins:
   - search
