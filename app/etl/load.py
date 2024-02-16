@@ -7,10 +7,11 @@ def load(transformed_data, file_path, file_type, file_name):
     """
     Perform the load step. Save the transformed data to a defined format file.
     Parameters:
-    - transformed_data: The transformed data to load
-    - file_path: The path to save the file
-    - file_type: The file type to save the file as (csv or xlsx)
-    - file_name: The name of the file to save
+
+    - `transformed_data`: The transformed data to load
+    - `file_path`: The path to save the file
+    - `file_type`: The file type to save the file as (csv or xlsx)
+    - `file_name`: The name of the file to save
     """
     transformed_data = transform.transform()
     # Create the directory if it doesn't exist

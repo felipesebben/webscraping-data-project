@@ -17,6 +17,13 @@ requests-mock = "^1.11.0"
 pandas = "^2.2.0"
 pyarrow = "^15.0.0"
 openpyxl = "^3.1.2"
+mkdocs = "^1.5.3"
+mkdocstrings-python = "^1.8.0"
+pygments = "^2.17.2"
+mkdocs-material = "^9.5.9"
+pymdown-extensions = "^10.7"
+mkdocs-bootstrap386 = "^0.0.2"
+mkdocs-mermaid2-plugin = "^1.1.1"
 
 
 [build-system]
@@ -27,3 +34,4 @@ build-backend = "poetry.core.masonry.api"
 format = "isort app/ tests/ && black app/ tests/"
 commit = "git add . && pre-commit run"
 test = "pytest tests -v"
+run = "python app/main.py"

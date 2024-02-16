@@ -1,0 +1,26 @@
+site_name: 🕸 Gulfood 2024 Web scraper
+theme:
+  name: material
+  highlightjs: true
+
+repo_name: "felipesebben/webscraping-data-project"
+repo_url: "https://github.com/felipesebben/webscraping-data-project"
+
+nav:
+  - Home: index.md
+  - Instructions: instructions.md
+  - ETL Classes: scripts.md
+  - ETL Pipeline: main_etl.md
+  - ETL Workflow: workflow.md
+
+
+plugins:
+  - search
+  - mermaid2
+  - mkdocstrings:
+      default_handler: python
+      parsers:
+        python:
+          parser: python
+          custom_templates:
+            - custom_template.jinja2
